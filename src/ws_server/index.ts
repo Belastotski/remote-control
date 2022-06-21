@@ -1,11 +1,4 @@
-import { IncomingMessage } from "http";
-import { createWebSocketStream, WebSocket, WebSocketServer } from "ws";
+import ServerController from "./serverController";
+import SocketController from "./socketController";
 
-const port = Number(process.env.PORT) || 8080;
-
-export const server = new WebSocketServer({ port });
-
-server.on("connection", (socket: WebSocket, req: IncomingMessage): void => {
-  console.log(socket);
-    const wss = createWebSocketStream(socket);
-});
+export default { ServerController, SocketController };

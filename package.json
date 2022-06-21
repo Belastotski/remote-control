@@ -22,6 +22,7 @@
         "prettier": "^2.7.1"
     },
     "dependencies": {
+        "@types/ws": "^8.5.3",
         "jimp": "^0.16.1",
         "robotjs": "^0.6.0",
         "ts-node": "^10.8.1",
