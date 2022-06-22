@@ -2,9 +2,8 @@
     "name": "ws_task",
     "version": "1.0.0",
     "description": "Template for the WebSocket remote control task",
-    "main": "index.js",
     "scripts": {
-        "start": "node ./index.js",
+        "start": "tsc && node ./dist/index.js",
         "start:dev": "nodemon ./index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -23,6 +22,7 @@
     },
     "dependencies": {
         "@types/ws": "^8.5.3",
+        "dotenv": "^16.0.1",
         "jimp": "^0.16.1",
         "robotjs": "^0.6.0",
         "ts-node": "^10.8.1",
