@@ -2,7 +2,7 @@ import { Transform, TransformCallback } from "node:stream";
 import internal = require("node:stream");
 import { ECommands, commands } from "./commands";
 
-export default class ServerController extends Transform {
+export default class SocketController extends Transform {
   constructor(options: internal.DuplexOptions) {
     super(options);
   }

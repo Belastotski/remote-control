@@ -10,4 +10,8 @@ console.log(`Start static http server on the ${HTTP_PORT} port!`);
 httpServer.listen(HTTP_PORT);
 
 const server = new WebSocketServer({ port: WS_PORT });
-new ServerController(server);
+const controller = new ServerController(server);
+
+process
+  .on("SIGINT", () => controller.close())
+  .on("exit", () => controller.close());
